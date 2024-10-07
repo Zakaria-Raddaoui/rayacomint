@@ -7,6 +7,7 @@ import ServicesSection from './ServicesSection';
 import Testimonial from './Testimonial';
 import CEO from "./CEO";
 import ProductPage from "./ProductPage";
+import ContactForm from "./ContactForm";
 
 const Root = () => {
 
@@ -22,6 +23,7 @@ const Root = () => {
             <Testimonial/>
             <CEO/>
             <ProductPage/>
+            <ContactForm/>
         </>
     );
 }

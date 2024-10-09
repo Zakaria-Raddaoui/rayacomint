@@ -5,10 +5,9 @@ const CEO = () => {
     const { t } = useTranslation();
     return (
         <div className="min-h-screen bg-white flex flex-col items-center">
-            {/* CEO Section */}
             <div className="flex flex-col items-center mt-10">
                 <img
-                    src={issamadjmi} // Replace with the actual image link
+                    src={issamadjmi}
                     alt="Mr. Taoufik Mlayah"
                     className="rounded-full w-40 h-40 object-cover"
                 />
@@ -22,7 +21,6 @@ const CEO = () => {
                 </ul>
             </div>
 
-            {/* Talents Section */}
             <div className="mt-16 text-center">
                 <h2 className="text-4xl font-bold">{t("talents")}</h2>
                 <p className="text-gray-500 mt-4 px-4">

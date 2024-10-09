@@ -20,7 +20,7 @@ import tamer8 from "../assets/produits/Tamer/tamer8.png";
 
 import { useTranslation } from "react-i18next";
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const products = {
     "Agro-alimentaires": [tamer0, tamer1, tamer2, tamer3, tamer4, tamer5, tamer6, tamer7, tamer8],
@@ -36,7 +36,7 @@ const ProductPage = () => {
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
-        setSelectedImageIndex(null); // Close any open image modal when switching tabs
+        setSelectedImageIndex(null);
     };
 
     const openImageModal = (imgSrcIndex) => {
@@ -52,7 +52,6 @@ const ProductPage = () => {
         <div id="produits" className="min-h-screen bg-white p-4 sm:p-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8">{t("products")}</h1>
 
-            {/* Tab Navigation */}
             <div className="flex flex-wrap justify-center space-x-4 sm:space-x-8 mb-4 sm:mb-8">
                 {Object.keys(products).map((category) => (
                     <button
@@ -65,7 +64,6 @@ const ProductPage = () => {
                 ))}
             </div>
 
-            {/* Product Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 {products[activeTab].map((imageSrc, index) => (
                     <img
@@ -78,18 +76,17 @@ const ProductPage = () => {
                 ))}
             </div>
 
-            {/* Modal for enlarged image */}
             {selectedImageIndex !== null && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={closeModal}>
                     <div className="relative bg-white p-4 rounded-lg max-w-[90%] max-h-[90%]" onClick={(e) => e.stopPropagation()}>
                         <Carousel
-                            selectedItem={selectedImageIndex} // Start at the clicked image
+                            selectedItem={selectedImageIndex}
                             showThumbs={false}
                             autoPlay={false}
                             infiniteLoop={true}
                             emulateTouch={true}
                             showStatus={false}
-                            onChange={(index) => setSelectedImageIndex(index)} // Update the selected image index
+                            onChange={(index) => setSelectedImageIndex(index)}
                         >
                             {selectedImages.map((image, index) => (
                                 <div key={index} style={{ userSelect: 'none' }}>

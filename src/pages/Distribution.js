@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import distribution from "../assets/distribution.png"; // Ensure the path is correct
+import distribution from "../assets/distribution.png";
 import Navbar from "../components/Navbar";
 
 const Distribution = () => {
@@ -8,14 +8,14 @@ const Distribution = () => {
 
     const handleMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - rect.left; // Get X position relative to the image
-        const y = e.clientY - rect.top; // Get Y position relative to the image
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         setMousePosition({ x, y });
-        setZoom(1.8); // Zoom level adjustment
+        setZoom(1.8);
     };
 
     const handleMouseLeave = () => {
-        setZoom(1); // Reset zoom when the mouse leaves
+        setZoom(1);
     };
 
     return (
@@ -24,16 +24,16 @@ const Distribution = () => {
             <h1 className="mt-20 justify-center text-center text-black font-bold text-4xl">Distribution:</h1>
             <div
                 className="flex justify-center items-center overflow-hidden"
-                style={{ height: 'calc(100vh - 150px)' }} // Adjust height for the screen minus navbar/title
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
+                style={{ height: 'calc(100vh - 150px)' }}
+                onMouseMove={window.innerWidth > 768 ? handleMouseMove : null}
+                onMouseLeave={window.innerWidth > 768 ? handleMouseLeave : null}
             >
                 <div
                     className="relative"
                     style={{
-                        width: '90%', // Container width
-                        maxWidth: '1800px', // Limit the max width of the image
-                        maxHeight: '1600px', // Limit the max height of the image
+                        width: '90%',
+                        maxWidth: '1800px',
+                        maxHeight: '1600px',
                         overflow: 'hidden',
                     }}
                 >
@@ -52,18 +52,20 @@ const Distribution = () => {
                 </div>
             </div>
 
-            {/* Add media query CSS adjustments for responsiveness */}
             <style jsx>{`
                 @media (max-width: 768px) {
                     h1 {
-                        font-size: 2rem; // Adjust heading size for mobile
+                        font-size: 2rem;
                     }
                     .relative {
-                        width: 100%; // Make the image container full width on mobile
-                        height: auto; // Let the image container auto-resize based on content
+                        width: 100%; 
+                        height: auto; 
                     }
                     img {
-                        max-height: 500px; // Limit image height for mobile screens
+                        max-height: 100vh; 
+                        max-width: 100%; 
+                        transform: rotate(90deg) scale(${zoom});
+                        transform-origin: center center; 
                     }
                 }
             `}</style>

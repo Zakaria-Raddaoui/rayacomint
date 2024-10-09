@@ -36,5 +36,15 @@
   "buttonTelecharge": "Download our product catalog",
   "AgriFood" : "Agri-food",
   "Construction" : "Construction Materials",
-  "Hardware" : "Hardware Items or Hardware Articles"
+  "Hardware" : "Hardware Items or Hardware Articles",
+  "form" : "Complete the form, and we will contact you immediately by phone or email to provide you with our expertise and assistance.",
+  "name" : "Your full name: ",
+  "email" : "Your Email:",
+  "sujet" : "Subject:",
+  "message" : "Your Message:",
+  "send" : "Send!",
+  "tel" : "Phone",
+  "address" : "Location",
+  "close" : "Close",
+  "view" : "View All Images"
 }

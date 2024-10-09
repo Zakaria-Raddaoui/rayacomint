@@ -1,8 +1,10 @@
 import logo from '../assets/logo.png';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import enFlag from '../assets/en.png'; // Adjust the path as necessary
-import frFlag from '../assets/fr.png'; // Adjust the path as necessary
+import enFlag from '../assets/en.png';
+import frFlag from '../assets/fr.png';
+import prFlag from '../assets/prFlag.png';
+
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -85,21 +87,29 @@ const Navbar = () => {
                 >
                     {i18n.language === 'en' ? (
                         <>
-                            <img src={enFlag} alt="English" className="h-4 w-4 mr-1 mt-1" />
+                            <img src={enFlag} alt="English" className="h-4 w-4 mr-1 mt-1"/>
                             <div className="text-base">English</div>
                         </>
-                    ) : (
+                    ) : i18n.language === 'fr' ? (
                         <>
-                            <img src={frFlag} alt="Français" className="h-4 w-4 mr-1 mt-1" />
+                            <img src={frFlag} alt="Français" className="h-4 w-4 mr-1 mt-1"/>
                             <div className="text-base">Français</div>
                         </>
+                    ) : (
+                        // New Portuguese Button
+                        <>
+                            <img src={prFlag} alt="Português" className="h-4 w-4 mr-1 mt-1"/>
+                            <div className="text-base">Português</div>
+                        </>
                     )}
-                    <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                         fill="currentColor" aria-hidden="true">
                         <path fillRule="evenodd"
                               d="M5.23 7.21a.75.75 0 011.06 0L10 10.44l3.71-3.23a.75.75 0 111.06 1.06l-4.25 3.5a.75.75 0 01-1.06 0l-4.25-3.5a.75.75 0 010-1.06z"
-                              clipRule="evenodd" />
+                              clipRule="evenodd"/>
                     </svg>
                 </button>
+
 
                 {isOpen && (
                     <div
@@ -109,15 +119,22 @@ const Navbar = () => {
                                 onClick={() => changeLanguage('en')}
                                 className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
                             >
-                                <img src={enFlag} alt="English" className="h-5 w-5 mr-2" />
+                                <img src={enFlag} alt="English" className="h-5 w-5 mr-2"/>
                                 English
                             </button>
                             <button
                                 onClick={() => changeLanguage('fr')}
                                 className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
                             >
-                                <img src={frFlag} alt="Français" className="h-5 w-5 mr-2" />
+                                <img src={frFlag} alt="Français" className="h-5 w-5 mr-2"/>
                                 Français
+                            </button>
+                            <button
+                                onClick={() => changeLanguage('pt')}
+                                className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
+                            >
+                                <img src={prFlag} alt="Portuguese" className="h-5 w-5 mr-2"/>
+                                Portuguese
                             </button>
                         </div>
                     </div>
@@ -126,7 +143,8 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <nav className='md:hidden absolute top-[65px] left-0 w-full bg-white flex flex-col items-center py-4 shadow-lg'>
+                <nav
+                    className='md:hidden absolute top-[65px] left-0 w-full bg-white flex flex-col items-center py-4 shadow-lg'>
                     <a href="/" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('home')}
                     </a>
@@ -147,7 +165,7 @@ const Navbar = () => {
                         {t('partners')}
                     </a>
 
-                    <a href="/#contact" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <a href="/contact" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('contact')}
                     </a>
                 </nav>

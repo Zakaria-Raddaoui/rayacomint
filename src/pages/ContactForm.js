@@ -1,47 +1,46 @@
 import React from 'react';
+import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
+import {useTranslation} from "react-i18next";
 
 const ContactForm = () => {
+    const {t} = useTranslation();
     return (
-        <div className="container mx-auto p-5 font-poppins">
-            <h1 className="text-4xl font-bold mb-4 text-gray-800">Get in touch with us</h1>
-            <p className="mb-6 text-lg text-gray-700">
-                You are only a few steps away from getting your personalized offer. Fill out the form and we will respond immediately with a call to assist you.
-            </p>
-            <ul className="list-disc pl-5 mb-6 text-gray-600">
-                <li>It’s very simple, just fill out the form and we will call you.</li>
-                <li>During the call, we will need information about your company.</li>
-                <li>Do not hesitate to send us an e-mail for any questions or inquiries.</li>
-            </ul>
+        <div id="contact" className="container mx-auto p-5 font-poppins">
+            <h1 className="text-4xl font-bold mb-4 text-gray-800">{t("contact")}</h1>
+            <p className="mb-6 text-lg text-gray-700">{t("form")}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Contact Information Section */}
                 <div className="bg-white shadow-md rounded-lg p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-800">Contact Information</h2>
-                    <p className="mb-2 text-gray-700"><strong>Phone number:</strong> +216 71 296 643</p>
-                    <p className="mb-2 text-gray-700"><strong>Fax:</strong> +216 71 297 940</p>
-                    <p className="mb-2 text-gray-700"><strong>Whatsapp:</strong> +216 20 454 005</p>
-                    <p className="mb-2 text-gray-700"><strong>Email:</strong> scit.int@planet.tn</p>
-                    <p className="mb-2 text-gray-700"><strong>Address:</strong> 15 rue Om Laarayes, Z.I. Saint Gobin, 2014, Megrine, Tunisie</p>
+                    <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaPhone size={25} className="inline-block mr-2" /> {t("tel")}</h2>
+                    <p className="mb-2 text-gray-700"> +216 22 286 499</p>
+                    <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaWhatsapp size={30} className="inline-block mr-2" /> Whatsapp</h2>
+                    <p className="mb-2 text-gray-700"> +216 20 454 005</p>
+                    <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaEnvelope size={25} className="inline-block mr-2" /> Email</h2>
+                    <p className="mb-2 text-gray-700"> sci.rayacomint@gmail.com</p>
+                    <h2 className="hover:text-xl text-lg font-semibold mb-4 text-orange-500"><FaMapMarkerAlt size={25} className="inline-block mr-2" /> {t("address")}</h2>
+                    <p className="mb-2 text-gray-700"> Rue Khairedin Becha Montplaisir, 1073 Beb Bhar, 25 Rue Omar Kadeh, Imm Montplaisir 2éme étage.</p>
                 </div>
 
+                {/* Contact Form Section */}
                 <form className="bg-white shadow-md rounded-lg p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-800">Contact Form</h2>
+                    <h2 className="text-lg font-semibold mb-4 text-gray-800">{t("name")}</h2>
                     <div className="mb-4">
-                        <label className="block mb-1 text-gray-700" htmlFor="name">Your Name</label>
-                        <input className="border rounded w-full py-2 px-3" type="text" id="name" required />
+                        <input className="border rounded w-full py-2 px-3" type="text" id="name" placeholder={t("name")} required />
                     </div>
+                    <h2 className="text-lg font-semibold mb-4 text-gray-800">{t("email")}</h2>
                     <div className="mb-4">
-                        <label className="block mb-1 text-gray-700" htmlFor="email">Your Email</label>
-                        <input className="border rounded w-full py-2 px-3" type="email" id="email" required />
+                        <input className="border rounded w-full py-2 px-3" type="email" id="email" placeholder={t("email")} required />
                     </div>
+                    <h2 className="text-lg font-semibold mb-4 text-gray-800">{t("sujet")}</h2>
                     <div className="mb-4">
-                        <label className="block mb-1 text-gray-700" htmlFor="subject">Subject</label>
-                        <input className="border rounded w-full py-2 px-3" type="text" id="subject" required />
+                        <input className="border rounded w-full py-2 px-3" type="text" id="subject" placeholder={t("sujet")} required />
                     </div>
+                    <h2 className="text-lg font-semibold mb-4 text-gray-800">{t("message")}</h2>
                     <div className="mb-4">
-                        <label className="block mb-1 text-gray-700" htmlFor="message">Your Message</label>
-                        <textarea className="border rounded w-full py-2 px-3" id="message" rows="4" required />
+                        <textarea className="border rounded w-full py-2 px-3" id="message" rows="4" placeholder={t("message")} required />
                     </div>
-                    <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 transition duration-200" type="submit">SEND</button>
+                    <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 transition duration-200" type="submit">{t("send")}</button>
                 </form>
             </div>
         </div>

@@ -16,7 +16,6 @@ const ServicesSection = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold text-center mb-8">{t('services')}</h2>
 
-                {/* Tabs for different services */}
                 <div className="flex flex-col md:flex-row justify-center mb-6">
                     <button
                         className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Commercial' ? 'text-blue-600 border-b-2 border-blue-600' : ''}`}
@@ -38,7 +37,6 @@ const ServicesSection = () => {
                     </button>
                 </div>
 
-                {/* Service content based on active tab */}
                 {activeTab === 'Commercial' && (
                     <div className="text-center">
                         <h3 className="text-2xl font-bold mb-4">

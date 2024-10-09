@@ -36,5 +36,15 @@
   "buttonTelecharge" : "Télécharger notre catalogue de produits",
   "AgriFood" : "Agro-alimentaires",
   "Construction" : "Matériaux de construction",
-  "Hardware" : "Articles Quincailleries"
+  "Hardware" : "Articles Quincailleries",
+  "form" : "Complétez le formulaire, et nous vous contacterons immédiatement par téléphone ou mail pour vous fournir notre expertise et notre aide.",
+  "name" : "Votre Nom et Prénom",
+  "email" : "Votre Email:",
+  "sujet" : "Sujet:",
+  "message" : "Votre Message:",
+  "send" : "Envoyer!",
+  "tel" : "Téléphone",
+  "address" : "Adresse",
+  "close" : "Fermer",
+  "view" : "Voir toutes les images"
 }

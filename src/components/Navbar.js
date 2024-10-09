@@ -107,14 +107,14 @@ const Navbar = () => {
                         <div className="py-1">
                             <button
                                 onClick={() => changeLanguage('en')}
-                                className="flex items-center block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
+                                className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
                             >
                                 <img src={enFlag} alt="English" className="h-5 w-5 mr-2" />
                                 English
                             </button>
                             <button
                                 onClick={() => changeLanguage('fr')}
-                                className="flex items-center block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
+                                className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
                             >
                                 <img src={frFlag} alt="Français" className="h-5 w-5 mr-2" />
                                 Français

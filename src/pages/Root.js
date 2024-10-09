@@ -8,7 +8,7 @@ import Testimonial from './Testimonial';
 import CEO from "./CEO";
 import ProductPage from "./ProductPage";
 import ContactForm from "./ContactForm";
-
+import FloatingButtons from "../components/FloatingButtons";
 const Root = () => {
 
     return (
@@ -24,6 +24,7 @@ const Root = () => {
             <CEO/>
             <ProductPage/>
             <ContactForm/>
+            <FloatingButtons />
         </>
     );
 }

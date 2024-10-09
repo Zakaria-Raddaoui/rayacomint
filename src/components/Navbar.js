@@ -28,7 +28,7 @@ const Navbar = () => {
         <header className='flex items-center justify-between bg-white h-[65px] w-full z-10 fixed top-0 px-4 md:px-10'>
             {/* Logo */}
             <div className='flex items-center'>
-                <a href="#Home">
+                <a href="/">
                     <img src={logo} alt="logo" className='h-12' />
                 </a>
             </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
 
             {/* Desktop Nav Links */}
             <nav className='hidden md:flex items-center gap-16'>
-                <a href="#Home" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <a href="/" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('home')}
                 </a>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                     {t('services')}
                 </Link>
 
-                <a href="#produits" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <a href="/#produits" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('products')}
                 </a>
 
@@ -65,11 +65,11 @@ const Navbar = () => {
                     {t('distribution')}
                 </Link>
 
-                <a href="#partners" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <a href="/#partners" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('partners')}
                 </a>
 
-                <a href="#contact" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <a href="/#contact" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('contact')}
                 </a>
             </nav>
@@ -127,7 +127,7 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
                 <nav className='md:hidden absolute top-[65px] left-0 w-full bg-white flex flex-col items-center py-4 shadow-lg'>
-                    <a href="#Home" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <a href="/" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('home')}
                     </a>
 
@@ -135,7 +135,7 @@ const Navbar = () => {
                         {t('services')}
                     </Link>
 
-                    <a href="#produits" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <a href="/#produits" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('products')}
                     </a>
 
@@ -143,11 +143,11 @@ const Navbar = () => {
                         {t('distribution')}
                     </Link>
 
-                    <a href="#partners" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <a href="/#partners" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('partners')}
                     </a>
 
-                    <a href="#contact" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <a href="/#contact" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('contact')}
                     </a>
                 </nav>

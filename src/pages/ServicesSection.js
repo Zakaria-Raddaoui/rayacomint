@@ -50,7 +50,7 @@ const ServicesSection = () => {
                         <img
                             src={commercial}
                             alt="Commercial Service"
-                            className="w-1/2 mx-auto"
+                            className="sm:w-1/2 mx-auto"
                         />
                     </div>
                 )}
@@ -66,7 +66,7 @@ const ServicesSection = () => {
                         <img
                             src={transit}
                             alt="Transit & Transport Service"
-                            className="w-1/2 mx-auto"
+                            className="sm:w-1/2 mx-auto"
                         />
                     </div>
                 )}
@@ -82,7 +82,7 @@ const ServicesSection = () => {
                         <img
                             src={logistique}
                             alt="Logistique Service"
-                            className="w-1/2 mx-auto"
+                            className="sm:w-1/2 mx-auto"
                         />
                     </div>
                 )}

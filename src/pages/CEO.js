@@ -29,14 +29,6 @@ const CEO = () => {
                     {t("description")}
                 </p>
             </div>
-
-            {/* Catalogue Section */}
-            <div className="mt-10 text-center">
-                <h3 className="text-2xl font-bold">{t("catalogue")}</h3>
-                <button className="mt-4 px-6 py-2 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600">
-                    📄 {t("buttonTelecharge")}
-                </button>
-            </div>
         </div>
     );
 };

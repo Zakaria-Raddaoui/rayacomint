@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import agro1 from "../assets/produits/agro1.png";
-import agro2 from "../assets/produits/agro2.png";
-import agro3 from "../assets/produits/agro3.png";
-import agro4 from "../assets/produits/agro4.png";
+
 import construction1 from "../assets/produits/construction1.png";
 import construction2 from "../assets/produits/construction2.png";
 import construction3 from "../assets/produits/construction3.png";
@@ -11,38 +8,44 @@ import quincaillerie1 from "../assets/produits/quincaillerie1.png";
 import quincaillerie2 from "../assets/produits/quincaillerie2.png";
 import quincaillerie3 from "../assets/produits/quincaillerie3.png";
 import quincaillerie4 from "../assets/produits/quincaillerie4.png";
-import {useTranslation} from "react-i18next";
+import tamer0 from "../assets/produits/Tamer/tamer0.png";
+import tamer1 from "../assets/produits/Tamer/tamer1.png";
+import tamer2 from "../assets/produits/Tamer/tamer2.png";
+import tamer3 from "../assets/produits/Tamer/tamer3.png";
+import tamer4 from "../assets/produits/Tamer/tamer4.png";
+import tamer5 from "../assets/produits/Tamer/tamer5.png";
+import tamer6 from "../assets/produits/Tamer/tamer6.png";
+import tamer7 from "../assets/produits/Tamer/tamer7.png";
+import tamer8 from "../assets/produits/Tamer/tamer8.png";
 
+import { useTranslation } from "react-i18next";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
 const products = {
-    "Agro-alimentaires": [
-        agro1, agro2, agro3, agro4
-    ],
-    "Matériaux de construction": [
-        construction1, construction2, construction3, construction4
-    ],
-    "Articles Quincailleries": [
-        quincaillerie1, quincaillerie2, quincaillerie3, quincaillerie4
-    ],
+    "Agro-alimentaires": [tamer0, tamer1, tamer2, tamer3, tamer4, tamer5, tamer6, tamer7, tamer8],
+    "Matériaux de construction": [construction1, construction2, construction3, construction4],
+    "Articles Quincailleries": [quincaillerie1, quincaillerie2, quincaillerie3, quincaillerie4],
 };
 
 const ProductPage = () => {
     const [activeTab, setActiveTab] = useState("Agro-alimentaires");
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+    const [selectedImages, setSelectedImages] = useState([]);
     const { t } = useTranslation();
-
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
-        setSelectedImage(null);  // Close any open image modal when switching tabs
+        setSelectedImageIndex(null); // Close any open image modal when switching tabs
     };
 
-    const openImageModal = (imgSrc) => {
-        setSelectedImage(imgSrc);
+    const openImageModal = (imgSrcIndex) => {
+        setSelectedImages(products[activeTab]);
+        setSelectedImageIndex(imgSrcIndex);
     };
 
     const closeModal = () => {
-        setSelectedImage(null);
+        setSelectedImageIndex(null);
     };
 
     return (
@@ -70,19 +73,30 @@ const ProductPage = () => {
                         src={imageSrc}
                         alt={`Product ${index}`}
                         className="w-full h-40 sm:h-[320px] object-cover rounded-lg shadow-lg cursor-pointer transform scale-95 hover:scale-100 transition-transform duration-300"
-                        onClick={() => openImageModal(imageSrc)}
+                        onClick={() => openImageModal(index)}
                     />
                 ))}
             </div>
 
             {/* Modal for enlarged image */}
-            {selectedImage && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="relative bg-white p-4 rounded-lg">
-                        <button className="absolute top-2 right-2 text-gray-700" onClick={closeModal}>
-                            ✖
-                        </button>
-                        <img src={selectedImage} alt="Enlarged product" className="w-full h-full object-cover"/>
+            {selectedImageIndex !== null && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={closeModal}>
+                    <div className="relative bg-white p-4 rounded-lg max-w-[90%] max-h-[90%]" onClick={(e) => e.stopPropagation()}>
+                        <Carousel
+                            selectedItem={selectedImageIndex} // Start at the clicked image
+                            showThumbs={false}
+                            autoPlay={false}
+                            infiniteLoop={true}
+                            emulateTouch={true}
+                            showStatus={false}
+                            onChange={(index) => setSelectedImageIndex(index)} // Update the selected image index
+                        >
+                            {selectedImages.map((image, index) => (
+                                <div key={index} style={{ userSelect: 'none' }}>
+                                    <img src={image} alt={`Slide ${index}`} className="w-full h-auto object-contain max-h-[70vh]" />
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
             )}

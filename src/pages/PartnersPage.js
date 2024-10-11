@@ -118,7 +118,7 @@ const PartnersPage = () => {
     const handleMouseUp = () => (isMouseDown.current = false);
 
     return (
-        <div id="partners" className="min-h-screen bg-white p-4 sm:p-8">
+        <div id="partners" className="bg-white p-4 sm:p-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8">Our Partners</h1>
 
             {/* Image slider */}

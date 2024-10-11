@@ -20,7 +20,7 @@
   "Title" : "Our transport service:",
   "logistique" : "LOGISTIC",
   "TitleService2" : "We offer you the right products with the best price-quality ratio.",
-  "SousTitle" : "SCIT has been able to develop its strategic axes related to export and trade thanks to the know-how of its human capital. Given its expertise in the African market, SCIT has gained the trust of several customers leading the way towards a stable and sustainable exchange relationship.",
+  "SousTitle" : "Rayacomint has advanced its strategic objectives in export and trade by leveraging the expertise of its talented team. With its deep knowledge of the African market, Rayacomint has earned the trust of numerous clients, fostering a stable and long-term business relationship.",
   "TransitDesc" : "Transit & Transport Services Description.",
   "TransitText" : "Transit and transport services are designed to ensure the efficient movement of goods between locations with the utmost care and precision.",
   "LogisticDesc" : "Logistique Services Description.",
@@ -46,5 +46,6 @@
   "tel" : "Phone",
   "address" : "Location",
   "close" : "Close",
-  "view" : "View All Images"
+  "view" : "View All Images",
+  "emailsent" : "Email sent successfully!"
 }

@@ -10,6 +10,7 @@ import ProductPage from "./ProductPage";
 import ContactForm from "./ContactForm";
 import FloatingButtons from "../components/FloatingButtons";
 import PartnersPage from "./PartnersPage";
+import Footer from "../components/Footer";
 
 const Root = () => {
 
@@ -22,12 +23,12 @@ const Root = () => {
             <Services/>
             <About/>
             <ServicesSection/>
-            <Testimonial/>
             <CEO/>
             <ProductPage/>
+            <PartnersPage />
             <ContactForm/>
             <FloatingButtons />
-            <PartnersPage />
+            <Footer/>
         </>
     );
 }

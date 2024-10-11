@@ -6,7 +6,13 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
     "i18next": "^23.15.1",
+    "nodemailer": "^6.9.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.2",
@@ -16,6 +22,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "react-swipeable": "^7.0.1",
+    "sweetalert2": "^11.14.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +53,10 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "tailwind.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

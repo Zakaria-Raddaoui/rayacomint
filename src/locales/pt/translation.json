@@ -20,7 +20,7 @@
   "Title" : "Nosso serviço de transporte:",
   "logistique" : "LOGÍSTICA",
   "TitleService2" : "Oferecemos a você os produtos certos com a melhor relação qualidade-preço.",
-  "SousTitle" : "A SCIT conseguiu desenvolver seus eixos estratégicos relacionados à exportação e ao comércio graças ao know-how de seu capital humano. Dada a sua experiência no mercado africano, a SCIT conquistou a confiança de vários clientes, abrindo caminho para uma relação de troca estável e sustentável.",
+  "SousTitle" : "A Rayacomint avançou nos seus objetivos estratégicos em exportação e comércio aproveitando a expertise da sua equipe talentosa. Com seu profundo conhecimento do mercado africano, a Rayacomint conquistou a confiança de vários clientes, promovendo uma relação comercial estável e de longo prazo.",
   "TransitDesc" : "Descrição dos Serviços de Trânsito e Transporte.",
   "TransitText" : "Os serviços de trânsito e transporte são projetados para garantir o movimento eficiente de mercadorias entre locais com o máximo cuidado e precisão.",
   "LogisticDesc" : "Descrição dos Serviços Logísticos.",
@@ -46,5 +46,7 @@
   "tel" : "Telefone",
   "address" : "Localização",
   "close" : "Fechar",
-  "view" : "Ver todas as imagens"
+  "view" : "Ver todas as imagens",
+  "emailsent" : "E-mail enviado com sucesso!"
+
 }

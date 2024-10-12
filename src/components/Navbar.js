@@ -22,6 +22,20 @@ const Navbar = () => {
         window.scrollTo({ top: document.getElementById('services').offsetTop, behavior: 'smooth' });
     };
 
+    const scrollToProducts = () => {
+        window.scrollTo({ top: document.getElementById('produits').offsetTop, behavior: 'smooth' });
+    };
+
+    const scrollToPartners = () => {
+        window.scrollTo({ top: document.getElementById('partners').offsetTop, behavior: 'smooth' });
+    };
+
+
+    const scrollToContact = () => {
+        window.scrollTo({ top: document.getElementById('contact').offsetTop, behavior: 'smooth' });
+    };
+
+
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -59,21 +73,21 @@ const Navbar = () => {
                     {t('services')}
                 </Link>
 
-                <a href="/#produits" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <Link to="/" onClick={scrollToProducts} className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('products')}
-                </a>
+                </Link>
 
                 <Link to="/distribution" className="text-gray-700 hover:text-red-600 font-medium text-lg">
                     {t('distribution')}
                 </Link>
 
-                <a href="/#partners" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <Link to="/" onClick={scrollToPartners} className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('partners')}
-                </a>
+                </Link>
 
-                <a href="/#contact" className='text-gray-700 hover:text-red-600 font-medium text-lg'>
+                <Link to="/" onClick={scrollToContact} className='text-gray-700 hover:text-red-600 font-medium text-lg'>
                     {t('contact')}
-                </a>
+                </Link>
             </nav>
 
             {/* Language Selector */}
@@ -153,21 +167,21 @@ const Navbar = () => {
                         {t('services')}
                     </Link>
 
-                    <a href="/#produits" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <Link to="/" onClick={scrollToProducts} className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('products')}
-                    </a>
+                    </Link>
 
                     <Link to="/distribution" className="text-gray-700 hover:text-red-600 font-medium text-lg py-2">
                         {t('distribution')}
                     </Link>
 
-                    <a href="/#partners" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <Link to="/" onClick={scrollToPartners} className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('partners')}
-                    </a>
+                    </Link>
 
-                    <a href="/contact" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
+                    <Link to="/" onClick={scrollToContact} className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
                         {t('contact')}
-                    </a>
+                    </Link>
                 </nav>
             )}
         </header>

@@ -34,9 +34,6 @@
   "description" : "Découvrez notre équipe expérimentée, chaleureuse, hautement qualifiée et dynamique, dédiée à garantir la satisfaction constante de nos clients.",
   "catalogue" : "Notre Catalogue:",
   "buttonTelecharge" : "Télécharger notre catalogue de produits",
-  "AgriFood" : "Agro-alimentaires",
-  "Construction" : "Matériaux de construction",
-  "Hardware" : "Articles Quincailleries",
   "form" : "Complétez le formulaire, et nous vous contacterons immédiatement par téléphone ou mail pour vous fournir notre expertise et notre aide.",
   "name" : "Votre Nom et Prénom",
   "email" : "Votre Email:",
@@ -47,5 +44,15 @@
   "address" : "Adresse",
   "close" : "Fermer",
   "view" : "Voir toutes les images",
-  "emailsent" : "Email envoyé avec succès!"
+  "emailsent" : "Email envoyé avec succès!",
+  "productsTab": "Produits",
+  "Agro-alimentaires": "Agro-alimentaires",
+  "Matériaux de construction": "Matériaux de construction",
+  "Articles Quincailleries": "Articles Quincailleries",
+  "Hygiènes féminines & Couches bébés": "Hygiènes féminines & Couches bébés",
+  "Produits cosmétiques": "Produits cosmétiques",
+  "Sanitaires": "Sanitaires",
+  "Inox": "Inox",
+  "Produits hygiéniques & d’entretien": "Produits hygiéniques & d’entretien",
+  "Divers": "Divers"
 }

@@ -34,9 +34,6 @@
   "description": "Discover our experienced, friendly, highly qualified, and dynamic team dedicated to ensuring the constant satisfaction of our customers.",
   "catalogue": "Our Catalogue:",
   "buttonTelecharge": "Download our product catalog",
-  "AgriFood" : "Agri-food",
-  "Construction" : "Construction Materials",
-  "Hardware" : "Hardware Items or Hardware Articles",
   "form" : "Complete the form, and we will contact you immediately by phone or email to provide you with our expertise and assistance.",
   "name" : "Your full name: ",
   "email" : "Your Email:",
@@ -47,5 +44,15 @@
   "address" : "Location",
   "close" : "Close",
   "view" : "View All Images",
-  "emailsent" : "Email sent successfully!"
+  "emailsent" : "Email sent successfully!",
+  "productsTab": "Products",
+  "Agro-alimentaires": "Agro-foods",
+  "Matériaux de construction": "Construction Materials",
+  "Articles Quincailleries": "Hardware Articles",
+  "Hygiènes féminines & Couches bébés": "Feminine Hygiene & Baby Diapers",
+  "Produits cosmétiques": "Cosmetic Products",
+  "Sanitaires": "Sanitary Products",
+  "Inox": "Inox",
+  "Produits hygiéniques & d’entretien": "Hygienic & Maintenance Products",
+  "Divers": "Miscellaneous"
 }

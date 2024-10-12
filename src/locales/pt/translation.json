@@ -34,9 +34,6 @@
   "description": "Descubra nossa equipe experiente, amigável, altamente qualificada e dinâmica, dedicada a garantir a constante satisfação de nossos clientes.",
   "catalogue": "Nosso Catálogo:",
   "buttonTelecharge": "Baixar nosso catálogo de produtos",
-  "AgriFood" : "Agroalimentar",
-  "Construction" : "Materiais de Construção",
-  "Hardware" : "Ferramentas ou Artigos de Ferragens",
   "form" : "Complete o formulário, e entraremos em contato imediatamente por telefone ou e-mail para fornecer nossa expertise e assistência.",
   "name" : "Seu nome completo:",
   "email" : "Seu Email:",
@@ -47,6 +44,15 @@
   "address" : "Localização",
   "close" : "Fechar",
   "view" : "Ver todas as imagens",
-  "emailsent" : "E-mail enviado com sucesso!"
-
+  "emailsent" : "E-mail enviado com sucesso!",
+  "productsTab": "Produtos",
+  "Agro-alimentaires": "Alimentos agro",
+  "Matériaux de construction": "Materiais de construção",
+  "Articles Quincailleries": "Artigos de Ferragens",
+  "Hygiènes féminines & Couches bébés": "Higiene feminina e Fraldas para bebês",
+  "Produits cosmétiques": "Produtos cosméticos",
+  "Sanitaires": "Sanitários",
+  "Inox": "Inox",
+  "Produits hygiéniques & d’entretien": "Produtos higiênicos e de manutenção",
+  "Divers": "Diversos"
 }

@@ -57,7 +57,7 @@ const ServicesOverview = () => {
             animateNumber(10, setTeamMembers);
         }
     }, [animate]);
-    // hii
+
     return (
         <div className="relative h-screen">
             <div className="absolute inset-0">
@@ -80,33 +80,56 @@ const ServicesOverview = () => {
                         </p>
                     </div>
                     <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div
-                            className="transform transition bg-white duration-500 scale-90 sm:scale-105 hover:scale-95 sm:hover:scale-110 hover:text-white hover:bg-black shadow-lg sm:p-10 rounded-lg flex flex-col items-center justify-center min-w-[200px] sm:min-h-[200px] min-h-[150px]">
-                            <div className="flex items-center">
-                                <FaTruck className="text-orange-700 text-5xl ml-2 mr-4" />
-                                <p className="text-5xl font-bold">{deliveries.toLocaleString()}+</p>
+                        {[
+                            {
+                                icon: <FaTruck className="text-orange-700 text-5xl ml-2 mr-4" />,
+                                value: deliveries,
+                                label: t('delivery'),
+                            },
+                            {
+                                icon: <FaGlobe className="text-orange-700 text-5xl ml-2 mr-4" />,
+                                value: countries,
+                                label: t('AfricanCountry'),
+                            },
+                            {
+                                icon: <FaUserFriends className="text-orange-700 text-5xl ml-2 mr-4" />,
+                                value: teamMembers,
+                                label: t('Team'),
+                            },
+                        ].map((stat, index) => (
+                            <div
+                                key={index}
+                                className={`hover:bg-black hover:text-white transform transition-all duration-500 scale-90 bg-white shadow-lg sm:p-10 rounded-lg flex flex-col items-center justify-center min-w-[200px] sm:min-h-[200px] min-h-[150px] 
+                                ${animate ? 'animate-fade-in' : 'opacity-0 translate-y-20'}`}
+                            >
+                                <div className="flex items-center">
+                                    {stat.icon}
+                                    <p className="text-5xl font-bold">{stat.value}+</p>
+                                </div>
+                                <p className="text-gray-500 mt-2">{stat.label}</p>
                             </div>
-                            <p className="text-gray-500 mt-2">{t('delivery')}</p>
-                        </div>
-                        <div
-                            className="transform transition bg-white duration-500 scale-90 sm:scale-105 hover:scale-95 sm:hover:scale-110 hover:text-white hover:bg-black shadow-lg sm:p-10 rounded-lg flex flex-col items-center justify-center min-w-[200px] sm:min-h-[200px] min-h-[150px]">
-                            <div className="flex items-center">
-                                <FaGlobe className="text-orange-700 text-5xl ml-2 mr-4" />
-                                <p className="text-5xl font-bold">{countries}+</p>
-                            </div>
-                            <p className="text-gray-500 mt-2">{t('AfricanCountry')}</p>
-                        </div>
-                        <div
-                            className="transform transition bg-white duration-500 scale-90 sm:scale-105 hover:scale-95 sm:hover:scale-110 hover:text-white hover:bg-black shadow-lg sm:p-10 rounded-lg flex flex-col items-center justify-center min-w-[200px] sm:min-h-[200px] min-h-[150px]">
-                            <div className="flex items-center">
-                                <FaUserFriends className="text-orange-700 text-5xl ml-2 mr-4" />
-                                <p className="text-5xl font-bold">{teamMembers}+</p>
-                            </div>
-                            <p className="text-gray-500 mt-2">{t('Team')}</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(50px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                .animate-fade-in {
+                    opacity: 1;
+                    animation: fadeIn 1s forwards;
+                }
+            `}</style>
         </div>
     );
 };

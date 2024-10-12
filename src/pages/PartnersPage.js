@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, {useState, useRef} from 'react';
 import Modal from 'react-modal';
 
 import partner1 from "../assets/partners/partner1.png";
@@ -72,7 +72,7 @@ import partner68 from "../assets/partners/partner68.png";
 import partner69 from "../assets/partners/partner69.png";
 import partner70 from "../assets/partners/partner70.png";
 import partner71 from "../assets/partners/partner71.png";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 
 const partners = {
@@ -129,11 +129,14 @@ const PartnersPage = () => {
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseUp}
-                style={{ cursor: isMouseDown.current ? 'grabbing' : 'grab', scrollBehavior: 'smooth' }}  // Smooth scrolling
+                style={{
+                    cursor: isMouseDown.current ? 'grabbing' : 'grab',
+                    scrollBehavior: 'smooth'
+                }}  // Smooth scrolling
             >
                 {partners[""].map((imageSrc, index) => (
                     <div key={index} className="w-40 sm:w-56 flex-shrink-0">
-                        <img src={imageSrc} alt={`Product ${index}`} className="object-contain w-full h-full" />
+                        <img src={imageSrc} alt={`Product ${index}`} className="object-contain w-full h-full"/>
                     </div>
                 ))}
             </div>
@@ -159,7 +162,7 @@ const PartnersPage = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-6 gap-4">
                     {partners[""].map((imageSrc, index) => (
                         <div key={index} className="w-full">
-                            <img src={imageSrc} alt={`Full Image ${index}`} className="object-contain w-full h-full" />
+                            <img src={imageSrc} alt={`Full Image ${index}`} className="object-contain w-full h-full"/>
                         </div>
                     ))}
                 </div>
@@ -172,26 +175,30 @@ const PartnersPage = () => {
             </Modal>
 
             {/* Add custom CSS for modal popup and hiding the scrollbar */}
+
             <style jsx>{`
                 .scrollbar-hide::-webkit-scrollbar {
                     display: none;
                 }
+
                 .scrollbar-hide {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
                 }
+
                 .modal-overlay {
                     position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background: rgba(0, 0, 0, 0.7);  // Dark overlay background
+                    background: rgba(0, 0, 0, 0.7); // Dark overlay background
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     z-index: 1000;
                 }
+
                 .modal-content {
                     background: white;
                     padding: 2rem;
@@ -199,16 +206,19 @@ const PartnersPage = () => {
                     max-width: 90vw;
                     max-height: 90vh;
                     overflow-y: auto;
-                    z-index: 1001;  // Ensure it's above the overlay
+                    z-index: 1001; // Ensure it's above the overlay
                     position: relative;
                 }
+
                 @media (max-width: 768px) {
                     h1 {
                         font-size: 1.5rem; // Adjust heading for mobile
                     }
+
                     .flex {
                         flex-wrap: nowrap; // Ensure no wrapping on mobile
                     }
+
                     .w-40 {
                         width: 30%; // Adjust image size on mobile
                     }

@@ -21,8 +21,8 @@ const CEO = () => {
                 </ul>
             </div>
 
-            <div className="mt-16 text-center">
-                <h2 className="text-4xl font-bold">{t("talents")}</h2>
+            <div className="mt-16">
+                <h2 className="text-4xl font-bold">{t("talents")}:</h2>
                 <p className="text-gray-500 mt-4 px-4">
                     {t("description")}
                 </p>

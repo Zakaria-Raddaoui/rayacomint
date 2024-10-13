@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
 
                 <div className="text-gray-400">
-                    <p><FaEnvelope size={25} className="inline-block mr-2" />sci.rayacomint@gmail.com</p>
+                    <p><FaEnvelope size={25} className="inline-block mr-2" />rayacomint@gmail.com</p>
                     <p><FaMapMarkerAlt size={25} className="inline-block mr-2" />Rue Khairedin Becha Montplaisir, 1073 Beb Bhar</p>
                 </div>
 

@@ -18,19 +18,19 @@ const ServicesSection = () => {
 
                 <div className="flex flex-col md:flex-row justify-center mb-6">
                     <button
-                        className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Commercial' ? 'text-blue-600 border-b-2 border-blue-600' : ''}`}
+                        className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Commercial' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}
                         onClick={() => handleTabClick('Commercial')}
                     >
                         <span className="mr-2">👥</span> COMMERCIAL
                     </button>
                     <button
-                        className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Transit & Transport' ? 'text-blue-600 border-b-2 border-blue-600' : ''}`}
+                        className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Transit & Transport' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}
                         onClick={() => handleTabClick('Transit & Transport')}
                     >
                         <span className="mr-2">🚛</span> TRANSIT & TRANSPORT
                     </button>
                     <button
-                        className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Logistique' ? 'text-blue-600 border-b-2 border-blue-600' : ''}`}
+                        className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Logistique' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}
                         onClick={() => handleTabClick('Logistique')}
                     >
                         <span className="mr-2">📦</span> {t('logistique')}

@@ -42,9 +42,9 @@ const ContactForm = () => {
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaPhone size={25} className="inline-block mr-2" /> {t("tel")}</h2>
                     <p className="mb-2 text-gray-700"> +216 22 286 499</p>
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaWhatsapp size={30} className="inline-block mr-2" /> Whatsapp</h2>
-                    <p className="mb-2 text-gray-700"> +216 20 454 005</p>
+                    <p className="mb-2 text-gray-700"> +216 22 286 499</p>
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaEnvelope size={25} className="inline-block mr-2" /> Email</h2>
-                    <p className="mb-2 text-gray-700"> sci.rayacomint@gmail.com</p>
+                    <p className="mb-2 text-gray-700"> rayacomint@gmail.com</p>
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaMapMarkerAlt size={25} className="inline-block mr-2" /> {t("address")}</h2>
                     <p className="mb-2 text-gray-700"> Rue Khairedin Becha Montplaisir, 1073 Beb Bhar, 25 Rue Omar Kadeh, Imm Montplaisir 2éme étage.</p>
                 </div>

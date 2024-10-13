@@ -77,14 +77,14 @@ import {useTranslation} from "react-i18next";
 
 const partners = {
     "": [
-        partner1, partner2, partner3, partner4, partner5, partner6, partner7, partner8, partner9, partner10,
-        partner11, partner12, partner13, partner14, partner15, partner16, partner17, partner18, partner19,
-        partner20, partner21, partner22, partner23, partner24, partner25, partner26, partner27, partner28,
-        partner29, partner30, partner31, partner32, partner33, partner34, partner35, partner36, partner37,
-        partner38, partner39, partner40, partner41, partner42, partner43, partner44, partner45, partner46,
-        partner47, partner48, partner49, partner50, partner51, partner52, partner53, partner54, partner55,
-        partner56, partner57, partner58, partner59, partner60, partner61, partner62, partner63, partner64,
-        partner65, partner66, partner67, partner68, partner69, partner70, partner71
+        partner11, partner43, partner68, partner40, partner66, partner62, partner7, partner21, partner19, partner10,
+        partner1, partner12, partner13, partner14, partner15, partner16, partner17, partner18, partner9,
+        partner20, partner8, partner22, partner41, partner24, partner25, partner26, partner27, partner38,
+        partner29, partner57, partner31, partner32, partner33, partner34, partner35, partner36, partner37,
+        partner28, partner39, partner50, partner23, partner42, partner2, partner44, partner45, partner46,
+        partner47, partner51, partner49, partner4, partner48, partner55, partner53, partner54, partner52,
+        partner56, partner30, partner58, partner67, partner60, partner69, partner6, partner71, partner64,
+        partner65, partner5, partner59, partner3, partner61, partner70, partner63
     ]
 };
 
@@ -145,7 +145,7 @@ const PartnersPage = () => {
             <div className="text-center mt-8">
                 <button
                     onClick={openAllImages}
-                    className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors"
+                    className="px-4 py-2 bg-orange-600 text-white font-semibold rounded-lg shadow-md hover:bg-orange-800 transition-colors"
                 >
                     {t("view")}
                 </button>

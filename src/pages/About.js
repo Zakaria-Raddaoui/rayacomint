@@ -52,8 +52,8 @@ const ServicesOverview = () => {
 
     useEffect(() => {
         if (animate) {
-            animateNumber(50, setDeliveries);
-            animateNumber(5, setCountries);
+            animateNumber(80, setDeliveries);
+            animateNumber(15, setCountries);
             animateNumber(10, setTeamMembers);
         }
     }, [animate]);

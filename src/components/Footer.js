@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container mx-auto text-center">
                 <div className="mb-4">
                     <h3 className="text-xl font-bold">Rayacomint</h3>
-                    <p className="text-gray-400">La première SCI de confiance en Tunisie rapport qualité-prix.</p>
+                    <p className="text-gray-400">Une Société Du Commerce de confiance en Tunisie rapport qualité-prix.</p>
                 </div>
 
                 <div className="flex justify-center space-x-4 mb-4">

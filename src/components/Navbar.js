@@ -82,7 +82,7 @@ const Navbar = () => {
                 </Link>
 
                 <Link to="/" onClick={scrollToPartners} className='text-gray-700 hover:text-red-600 font-medium text-lg'>
-                    {t('partners')}
+                    <div className="">{t('partners')}</div>
                 </Link>
 
                 <Link to="/" onClick={scrollToContact} className='text-gray-700 hover:text-red-600 font-medium text-lg'>

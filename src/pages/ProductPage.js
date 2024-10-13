@@ -116,7 +116,7 @@ const ProductPage = () => {
             </div>
 
             {/* Grid for displaying products */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 sm:gap-4">
+            <div className="grid grid-cols-2 sm:ml-20 sm:grid-cols-5 gap-4 sm:gap-4">
                 {products[activeTab].map((imageSrc, index) => (
                     <img
                         key={index}

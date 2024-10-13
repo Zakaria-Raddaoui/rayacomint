@@ -67,7 +67,8 @@ const ContactForm = () => {
                     <div className="mb-4">
                         <textarea className="border rounded w-full py-2 px-3" id="message" name="message" rows="4" placeholder={t("message")} required />
                     </div>
-                    <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 transition duration-200" type="submit">{t("send")}</button>
+                    <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 transition duration-200" type="submit"
+                    >{t("send")}</button>
                 </form>
             </div>
         </div>

@@ -54,5 +54,7 @@
   "Sanitaires": "Sanitary Products",
   "Inox": "Inox",
   "Produits hygiéniques & d’entretien": "Hygienic & Maintenance Products",
-  "Divers": "Miscellaneous"
+  "Divers": "Miscellaneous",
+  "transit" : "TRANSIT & TRANSPORT",
+  "commercial" : "COMMERCIAL"
 }

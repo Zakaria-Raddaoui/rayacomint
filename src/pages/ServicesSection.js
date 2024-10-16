@@ -21,13 +21,13 @@ const ServicesSection = () => {
                         className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Commercial' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}
                         onClick={() => handleTabClick('Commercial')}
                     >
-                        <span className="mr-2">👥</span> COMMERCIAL
+                        <span className="mr-2">👥</span> {t('commercial')}
                     </button>
                     <button
                         className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Transit & Transport' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}
                         onClick={() => handleTabClick('Transit & Transport')}
                     >
-                        <span className="mr-2">🚛</span> TRANSIT & TRANSPORT
+                        <span className="mr-2">🚛</span> {t('transit')}
                     </button>
                     <button
                         className={`mx-4 py-2 font-semibold text-xl flex items-center ${activeTab === 'Logistique' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}

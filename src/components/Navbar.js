@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import enFlag from '../assets/en.png';
 import frFlag from '../assets/fr.png';
 import prFlag from '../assets/prFlag.png';
+import ruFlag from '../assets/ru.png';
+
 
 import { useState } from 'react';
 
@@ -97,7 +99,7 @@ const Navbar = () => {
                     className="inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
                     aria-expanded={isOpen}
                     aria-haspopup="true"
-                    onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
+                    onClick={() => setIsOpen(!isOpen)}
                 >
                     {i18n.language === 'en' ? (
                         <>
@@ -109,8 +111,12 @@ const Navbar = () => {
                             <img src={frFlag} alt="Français" className="h-4 w-4 mr-1 mt-1"/>
                             <div className="text-base">Français</div>
                         </>
+                    ) : i18n.language === 'ru' ? (
+                        <>
+                            <img src={ruFlag} alt="Russian" className="h-4 w-4 mr-1 mt-1"/>
+                            <div className="text-base">Russian</div>
+                        </>
                     ) : (
-                        // New Portuguese Button
                         <>
                             <img src={prFlag} alt="Português" className="h-4 w-4 mr-1 mt-1"/>
                             <div className="text-base">Português</div>
@@ -144,6 +150,13 @@ const Navbar = () => {
                                 Français
                             </button>
                             <button
+                                onClick={() => changeLanguage('ru')}
+                                className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
+                            >
+                                <img src={ruFlag} alt="Russian" className="h-5 w-5 mr-2"/>
+                                Russian
+                            </button>
+                            <button
                                 onClick={() => changeLanguage('pt')}
                                 className="flex items-center px-4 py-2 text-base text-gray-700 hover:bg-gray-100 w-full"
                             >
@@ -160,7 +173,7 @@ const Navbar = () => {
                 <nav
                     className='md:hidden absolute top-[65px] left-0 w-full bg-white flex flex-col items-center py-4 shadow-lg'>
                     <a href="/" className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>
-                        {t('home')}
+                    {t('home')}
                     </a>
 
                     <Link to="/" onClick={scrollToServices} className='text-gray-700 hover:text-red-600 font-medium text-lg py-2'>

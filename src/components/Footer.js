@@ -1,10 +1,7 @@
 import React from 'react';
-import {FaFacebook, FaInstagram, FaMapMarkerAlt, FaEnvelope, FaWhatsapp} from 'react-icons/fa'; // Import social media icons
-import { useTranslation } from 'react-i18next'; // Import translation hook
+import {FaFacebook, FaMapMarkerAlt, FaEnvelope, FaWhatsapp} from 'react-icons/fa';
 
 const Footer = () => {
-    const { t } = useTranslation(); // Translation hook
-
     return (
         <footer className="bg-gray-800 text-white py-8">
             <div className="container mx-auto text-center">

@@ -9,7 +9,7 @@ const ContactForm = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "9c276de6-23d4-4659-a9c9-f9d7f3c51bcd");
+        formData.append("access_key", "aa3cfa53-ec6a-44d1-95ac-fb414ca44f51");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -44,7 +44,7 @@ const ContactForm = () => {
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaWhatsapp size={30} className="inline-block mr-2" /> Whatsapp</h2>
                     <p className="mb-2 text-gray-700"> +216 22 286 499</p>
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaEnvelope size={25} className="inline-block mr-2" /> Email</h2>
-                    <p className="mb-2 text-gray-700"> rayacomint@gmail.com</p>
+                    <p className="mb-2 text-gray-700"> contact@rayacomint.online</p>
                     <h2 className="text-lg font-semibold mb-4 text-orange-500"><FaMapMarkerAlt size={25} className="inline-block mr-2" /> {t("address")}</h2>
                     <p className="mb-2 text-gray-700"> Rue Khairedin Becha Montplaisir, 1073 Beb Bhar, 25 Rue Omar Kadeh, Imm Montplaisir 2éme étage.</p>
                 </div>

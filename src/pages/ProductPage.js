@@ -12,7 +12,7 @@ import tamer5 from "../assets/produits/Tamer/tamer5.png";
 import tamer6 from "../assets/produits/Tamer/tamer6.png";
 import tamer7 from "../assets/produits/Tamer/tamer7.png";
 import tamer8 from "../assets/produits/Tamer/tamer8.png";
-import tamer9 from "../assets/produits/Tamer/tamer9.png";
+import tomato from "../assets/produits/Tamer/tomato.png";
 
 import quincaillerie1 from "../assets/produits/quincailleries/quincailleries1.png";
 import quincaillerie2 from "../assets/produits/quincailleries/quincailleries2.png";
@@ -65,7 +65,7 @@ import divers4 from "../assets/produits/divers/divers4.png";
 
 
 const products = {
-    "Agro-alimentaires": [tamer0, tamer1, tamer2, tamer3, tamer4, tamer5, tamer6, tamer7, tamer8, tamer9], /* */
+    "Agro-alimentaires": [tamer0, tamer1, tamer2, tamer3, tamer4, tamer5, tamer6, tamer7, tamer8, tomato], /* */
     "Matériaux de construction": [construction1, construction2, construction3, construction4, construction5], /* */
     "Articles Quincailleries": [quincaillerie1, quincaillerie2, quincaillerie3, quincaillerie4, quincaillerie5, quincaillerie6, quincaillerie7, quincaillerie8], /* */
     "Hygiènes féminines & Couches bébés": [hygiene1, hygiene2, hygiene3, hygiene4], /* */
